@@ -12,15 +12,15 @@ export class TravelController {
   return 'planifier un nouveau voyage ici';
 }
 
-  @Get()
-  findAll() {
-    return this.travelService.findAll();
-  }
+ @Get()
+findAll() {
+  return this.travelService.findAll();
+}
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.travelService.findOne(+id);
-  }
+ @Get(':id')
+findOne(@Param('id') id: string) {
+  return this.travelService.findOne(+id);
+}
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateTravelDto: UpdateTravelDto) {
